@@ -8255,7 +8255,7 @@ bool _IsExclusiveSpellAura(SpellEntry const* spellproto, SpellEffectIndex eff, A
         // Strength
         case 2367:
         case 8118:
-        case 8212:
+        case 3164:
         case 8119:
         case 8120:
         case 12179:
@@ -8310,6 +8310,7 @@ bool _IsExclusiveSpellAura(SpellEntry const* spellproto, SpellEffectIndex eff, A
             return true;
         case SPELL_AURA_MOD_MELEE_HASTE: // Attack speed, mouvement speed, and healing taken reductions don't stack with other auras of the same effect.
         case SPELL_AURA_MOD_DECREASE_SPEED:
+        case SPELL_AURA_MOD_CASTING_SPEED_NOT_STACK:
         case SPELL_AURA_MOD_HEALING_PCT:
             if (spellproto->EffectBasePoints[eff] < 0)
                 return true;
